@@ -1,0 +1,19 @@
+[
+    {
+      "title": "Building an NFT Marketplace with React & Firebase",
+      "subtitle": "Decentralized architecture breakdown",
+      "link": "https://write.pandeakshat.com/nft-marketplace-architecture",
+      "status": "Published",
+      "image": "/images/project-flow.png",
+      "tags": ["Web3", "Firebase", "React", "Blockchain"]
+    },
+    {
+      "title": "Dashboarding with Streamlit",
+      "subtitle": "Best practices for Python data dashboards",
+      "link": "https://write.pandeakshat.com/streamlit-dashboards",
+      "status": "Draft",
+      "image": "/images/project-flow.png",
+      "tags": ["Streamlit", "Data Science", "Python"]
+    }
+  ]
+  

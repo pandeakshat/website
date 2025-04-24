@@ -1,0 +1,59 @@
+---
+// src/components/Contact.astro
+import { Button } from "@/components/ui/button";
+import * as TablerIcons from "@tabler/icons-react";
+
+const IconGithub = TablerIcons.IconBrandGithub;
+const IconLinkedin = TablerIcons.IconBrandLinkedin;
+const IconMail = TablerIcons.IconMail;
+---
+
+<section
+  id="contact" class= text-foreground px-4 md:px-10 lg:px-20 py-24 animate-on-scroll"
+>
+  <div class="max-w-3xl mx-auto text-center mb-12">
+    <h2 class="text-4xl font-bold mb-2">Get in Touch</h2>
+    <p class="text-muted text-lg">
+      Have a project in mind, a question, or just want to say hello? Feel free to drop a message below or connect via socials.
+    </p>
+  </div>
+
+  <form class="max-w-2xl mx-auto grid gap-6">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+      class="px-4 py-3 rounded-md border border-border bg-card text-card-foreground placeholder:text-muted"
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+      class="px-4 py-3 rounded-md border border-border bg-card text-card-foreground placeholder:text-muted"
+    />
+    <textarea
+      name="message"
+      rows="5"
+      placeholder="Your Message"
+      required
+      class="px-4 py-3 rounded-md border border-border bg-card text-card-foreground placeholder:text-muted"
+    ></textarea>
+    <Button type="submit" class="w-full bg-highlight text-black hover:opacity-90">
+      Send Message
+    </Button>
+  </form>
+
+  <div class="mt-10 flex justify-center gap-6">
+    <a href="mailto:mail@pandeakshat.com" target="_blank" class="hover:text-highlight">
+      <IconMail class="w-6 h-6" />
+    </a>
+    <a href="https://github.com/pandeakshat" target="_blank" class="hover:text-highlight">
+      <IconGithub class="w-6 h-6" />
+    </a>
+    <a href="https://linkedin.com/in/pandeakshat" target="_blank" class="hover:text-highlight">
+      <IconLinkedin class="w-6 h-6" />
+    </a>
+  </div>
+</section>

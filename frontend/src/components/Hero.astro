@@ -1,0 +1,118 @@
+---
+// src/components/Hero.astro
+import { Button } from "@/components/ui/button";
+import * as TablerIcons from "@tabler/icons-react";
+const IconGithub = TablerIcons.IconBrandGithub;
+const IconLinkedin = TablerIcons.IconBrandLinkedin;
+const IconMail = TablerIcons.IconMail;
+
+---
+<section
+  id="home"
+  class="relative h-screen flex flex-col justify-center text-foreground px-4 md:px-10 lg:px-20 overflow-hidden"
+>
+  <div
+    class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 lg:gap-24 animate-on-scroll"
+  >
+    <!-- Left Column: Text and CTAs -->
+    <div
+      class="text-center md:text-left flex flex-col justify-center items-center md:items-start"
+    >
+      <h1 class="text-5xl font-bold mb-2">Hi, I'm Akshat Pande</h1>
+      <p class="text-md italic text-muted mb-2">
+        "Building experiences, not just interfaces."
+      </p>
+      <div class="flex flex-wrap gap-2 mb-4 text-sm text-muted">
+        <span class="bg-border px-2 py-1 rounded-full">Frontend Dev</span>
+        <span class="bg-border px-2 py-1 rounded-full">Data Science</span>
+        <span class="bg-border px-2 py-1 rounded-full">Blockchain</span>
+      </div>
+      <p class="text-xl max-w-md text-muted mb-6">
+        Transforming ideas into interactive and seamless digital experiences
+        using cutting-edge tech.
+      </p>
+
+      <div class="flex gap-4 mb-6">
+        <Button asChild class="bg-highlight text-black hover:opacity-90">
+          <a href="#projects">View My Work</a>
+        </Button>
+        <Button asChild variant="outline">
+          <a href="#contact">Let's Talk</a>
+        </Button>
+      </div>
+
+      <div class="flex gap-4 justify-center md:justify-start">
+        <a
+          href="https://github.com/pandeakshat"
+          target="_blank"
+          class="hover:text-highlight"
+        >
+          <IconGithub class="w-6 h-6" />
+        </a>
+        <a
+          href="https://linkedin.com/in/pandeakshat"
+          target="_blank"
+          class="hover:text-highlight"
+        >
+          <IconLinkedin class="w-6 h-6" />
+        </a>
+        <a href="mailto:pandeakshat@gmail.com" class="hover:text-highlight">
+          <IconMail class="w-6 h-6" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Image with Glow -->
+    <div class="relative flex justify-center md:justify-end animate-on-scroll">
+      <div
+        class="absolute w-72 h-72 bg-highlight/20 rounded-full blur-2xl"
+      ></div>
+      <img
+        src="profile.png"
+        alt="Akshat Pande"
+        class="relative z-10 w-64 h-64 rounded-full object-cover border-4 border-highlight shadow-xl"
+        loading="lazy"
+      />
+    </div>
+  </div>
+
+  <!-- Scroll down hint -->
+  <div
+    id="scroll-hint"
+    class="absolute bottom-10 w-full text-center animate-bounce text-muted transition-opacity duration-500"
+  >
+    ↓ Scroll to see my work
+  </div>
+</section>
+
+<script>
+  if (typeof window !== "undefined") {
+    const scrollHint = document.getElementById("scroll-hint");
+    const animatedEls = document.querySelectorAll(".animate-on-scroll");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-fade-in", "opacity-100");
+            entry.target.classList.remove("opacity-0");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    animatedEls.forEach((el) => {
+      el.classList.add("opacity-0");
+      observer.observe(el);
+    });
+
+    window.addEventListener("scroll", () => {
+      if (scrollHint) {
+        scrollHint.style.opacity = window.scrollY > 20 ? "0" : "1";
+      }
+    });
+  }
+</script>

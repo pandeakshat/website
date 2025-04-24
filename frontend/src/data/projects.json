@@ -1,0 +1,28 @@
+[
+    {
+      "title": "Customer Analysis Dashboard",
+      "subtitle": "Segment and visualize customer data",
+      "link": "https://github.com/pandeakshat/customer-dashboard",
+      "status": "In Development",
+      "image": "/images/customer-dashboard.png",
+      "technologies": ["Python", "Streamlit", "Firebase"]
+    },
+    {
+      "title": "NFT Marketplace",
+      "subtitle": "Trade and mint NFTs using Web3",
+      "link": "https://github.com/pandeakshat/nft-marketplace",
+      "status": "In Development",
+      "image": "/images/nft-marketplace.png",
+      "technologies": ["React", "IPFS", "MetaMask", "Firebase"]
+    },
+    
+    {
+      "title": "Project Flow",
+      "subtitle": "Track team tasks with a timeline interface",
+      "link": "https://github.com/pandeakshat/project-flow",
+      "status": "In Development",
+      "image": "/images/project-flow.png",
+      "technologies": ["Astro", "TailwindCSS", "Firebase"]
+    }
+  ]
+  
