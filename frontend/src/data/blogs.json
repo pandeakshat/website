@@ -1,11 +1,11 @@
 [
     {
-      "title": "Building an NFT Marketplace with React & Firebase",
-      "subtitle": "Decentralized architecture breakdown",
-      "link": "https://write.pandeakshat.com/nft-marketplace-architecture",
+      "title": "Mistakes as a programmer",
+      "subtitle": "A Practical Guide to Avoiding Common Coding Mistakes",
+      "link": "https://dev.to/pandeakshat/mistakes-as-a-programmer-13e8",
       "status": "Published",
-      "image": "/images/project-flow.png",
-      "tags": ["Web3", "Firebase", "React", "Blockchain"]
+      "image": "/images/mistakes.png",
+      "tags": ["Experience", "Programming", "Mistakes", "Growth"]
     },
     {
       "title": "Dashboarding with Streamlit",

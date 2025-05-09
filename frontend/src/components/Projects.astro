@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
     <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth px-2">
       {projects.map(project => (
-        <a href={project.link} class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-projects/80 transition-all duration-200 bg-card/80 backdrop-blur-sm">
+        <a href={project.link} target="_blank" class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-projects/80 transition-all duration-200 bg-card/80 backdrop-blur-sm">
           <img src={project.image} alt={project.title + ' preview'} class="w-full h-40 object-cover" />
           <div class="p-4 flex flex-col justify-between h-[calc(100%-160px)]">
             <CardContent>

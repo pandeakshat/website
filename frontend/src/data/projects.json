@@ -2,7 +2,7 @@
     {
       "title": "Customer Analysis Dashboard",
       "subtitle": "Segment and visualize customer data",
-      "link": "https://github.com/pandeakshat/customer-dashboard",
+      "link": "https://github.com/pandeakshat/customer-analysis",
       "status": "In Development",
       "image": "/images/customer-dashboard.png",
       "technologies": ["Python", "Streamlit", "Firebase"]
