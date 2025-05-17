@@ -1,36 +1,42 @@
 [
-    {
-      "title": "Customer Analysis Dashboard",
-      "subtitle": "Segment and visualize customer data",
-      "link": "https://github.com/pandeakshat/customer-analysis",
-      "status": "In Development",
-      "image": "/images/customer-dashboard.png",
-      "technologies": ["Python", "Streamlit", "Firebase"]
-    },
-    {
-      "title": "NFT Marketplace",
-      "subtitle": "Trade and mint NFTs using Web3",
-      "link": "https://github.com/pandeakshat/nft-marketplace",
-      "status": "In Development",
-      "image": "/images/nft-marketplace.png",
-      "technologies": ["React", "IPFS", "MetaMask", "Firebase"]
-    },
-        {
-      "title": "BSE Simulation",
-      "subtitle": "BSE - Robot Trader Workshop Web Simulation",
-      "link": "https://github.com/pandeakshat/nft-marketplace",
-      "status": "In Development",
-      "image": "/images/bse-simulation.png",
-      "technologies": ["Python", "Matplotlib", "Streamlit", "Pandas"]
-    },
-    
-    {
-      "title": "Project Flow",
-      "subtitle": "Track team tasks with a timeline interface",
-      "link": "https://github.com/pandeakshat/project-flow",
-      "status": "In Development",
-      "image": "/images/project-flow.png",
-      "technologies": ["Astro", "TailwindCSS", "Firebase"]
-    }
-  ]
-  
+  {
+    "title": "Google Data Analytics Certificate",
+    "subtitle": "8-course professional program by Google on data cleaning, analysis, and visualization",
+    "link": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "status": "Completed",
+    "image": "/images/certificates/google-data-analytics.png",
+    "technologies": ["Excel", "SQL", "R", "Data Cleaning", "Tableau"]
+  },
+  {
+    "title": "AWS Cloud Foundations",
+    "subtitle": "Introduction to AWS cloud infrastructure and global services",
+    "link": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
+    "status": "Completed",
+    "image": "/images/certificates/aws-cloud-foundations.png",
+    "technologies": ["AWS", "Cloud Computing", "IAM", "S3", "EC2"]
+  },
+  {
+    "title": "AI Essentials by Google",
+    "subtitle": "Basics of artificial intelligence and its applications",
+    "link": "https://www.cloudskillsboost.google/course_templates/536",
+    "status": "Completed",
+    "image": "/images/certificates/ai-essentials.png",
+    "technologies": ["AI", "Machine Learning", "Responsible AI"]
+  },
+  {
+    "title": "Bloomberg Market Concepts",
+    "subtitle": "Foundational finance course with Bloomberg Terminal usage",
+    "link": "https://portal.bloombergforeducation.com/",
+    "status": "Completed",
+    "image": "/images/certificates/bloomberg-bmc.png",
+    "technologies": ["Finance", "Economics", "Terminal Data"]
+  },
+  {
+    "title": "Social Network Analysis",
+    "subtitle": "NPTEL-certified course on network structures and analytics",
+    "link": "https://nptel.ac.in/courses/106/106/106106146/",
+    "status": "Completed",
+    "image": "/images/certificates/social-network-analysis.png",
+    "technologies": ["Python", "NetworkX", "Graph Theory"]
+  }
+]
