@@ -1,0 +1,32 @@
+---
+import certs from '../data/certs.json';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+---
+
+<section id="certificate" class="py-20 text-foreground px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-12 text-highlight">Certificate</h2>
+
+    <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth px-2 no-scrollbar">
+      {certs.map(cert => (
+        <a href={cert.link} target="_blank" class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-certs/80 transition-all duration-200 bg-card/80 backdrop-blur-sm">
+          <img src={cert.image} alt={cert.title + ' preview'} class="w-full h-40 object-cover" />
+          <div class="p-4 flex flex-col justify-between h-[calc(100%-160px)]">
+            <CardContent>
+            <CardTitle class="text-lg leading-snug">{cert.title}</CardTitle>
+                <br />
+              <p class="text-sm mb-2 line-clamp-3">{cert.subtitle}</p>
+              <p class="text-xs italic mb-3">{cert.status}</p>
+              <br />
+              <div class="flex flex-wrap gap-2 mt-auto">
+                {cert.technologies.map(tech => (
+                  <span class="text-xs px-2 py-1 bg-certs text-black rounded-full">{tech}</span>
+                ))}
+              </div>
+            </CardContent>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

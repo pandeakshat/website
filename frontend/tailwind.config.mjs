@@ -10,6 +10,7 @@ export default {
         highlight: "#b8860b",
         projects: "#2a9d8f",
         blog: "#50c878",
+        certs: "#b8860b",
       },
     },
   },

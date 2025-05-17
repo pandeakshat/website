@@ -142,8 +142,20 @@
   .bg-projects {
     background-color: #2a9d8f; /* Teal for projects */
   }
+  .bg-certs {
+    background-color: #b8860b; /* Gold for certifications */
+  }
   .bg-blog {
     background-color: #50c878; /* Emerald for blog posts */
+  }
+    .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge, and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
   }
 }
 
