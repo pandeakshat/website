@@ -4,39 +4,41 @@
     "subtitle": "8-course professional program by Google on data cleaning, analysis, and visualization",
     "link": "https://www.coursera.org/professional-certificates/google-data-analytics",
     "status": "Completed",
-    "image": "/images/certificates/google-data-analytics.png",
-    "technologies": ["Excel", "SQL", "R", "Data Cleaning", "Tableau"]
+    "image": "/images/certificates/certificate-google_data_analytics.png",
+    "technologies": ["Excel", "SQL", "Python", "Tableau"]
   },
   {
     "title": "AWS Cloud Foundations",
     "subtitle": "Introduction to AWS cloud infrastructure and global services",
     "link": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/",
     "status": "Completed",
-    "image": "/images/certificates/aws-cloud-foundations.png",
-    "technologies": ["AWS", "Cloud Computing", "IAM", "S3", "EC2"]
+    "image": "/images/certificates/certificate-aws_academy_cloud_foundations.png",
+    "technologies": ["AWS", "IAM", "S3", "EC2"]
   },
   {
     "title": "AI Essentials by Google",
     "subtitle": "Basics of artificial intelligence and its applications",
     "link": "https://www.cloudskillsboost.google/course_templates/536",
     "status": "Completed",
-    "image": "/images/certificates/ai-essentials.png",
-    "technologies": ["AI", "Machine Learning", "Responsible AI"]
+    "image": "/images/certificates/certificate-google_ai_essentials.png",
+    "technologies": ["AI", "ML", "Responsible AI"]
   },
   {
-    "title": "Bloomberg Market Concepts",
-    "subtitle": "Foundational finance course with Bloomberg Terminal usage",
-    "link": "https://portal.bloombergforeducation.com/",
+    "title": "IBM Data Fundamentals SkillsBuild",
+    "subtitle": "Core concepts of data science, including data analysis, visualization, and machine learning",
+    "link": "https://skillsbuild.org/resources/journeys/ibm-data-fundamentals-skillsbuild-journey",
     "status": "Completed",
-    "image": "/images/certificates/bloomberg-bmc.png",
-    "technologies": ["Finance", "Economics", "Terminal Data"]
+    "image": "/images/certificates/certificate-ibm_data_fundamentals.png",
+    "technologies": ["Analytics", "Visualization", "ML/AI"]
   },
   {
     "title": "Social Network Analysis",
     "subtitle": "NPTEL-certified course on network structures and analytics",
     "link": "https://nptel.ac.in/courses/106/106/106106146/",
     "status": "Completed",
-    "image": "/images/certificates/social-network-analysis.png",
+    "image": "/images/certificates/certificate-nptel_social_network.png",
     "technologies": ["Python", "NetworkX", "Graph Theory"]
   }
 ]
+
+

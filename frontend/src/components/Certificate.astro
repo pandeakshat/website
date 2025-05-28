@@ -7,14 +7,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-4xl font-bold mb-12 text-highlight">Certificate</h2>
 
-    <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth px-2 no-scrollbar">
+    <div
+      id="scrollable-certs"
+      class="flex overflow-x-auto gap-4 snap-x snap-mandatory scroll-smooth px-2 no-scrollbar cursor-grab"
+    >
       {certs.map(cert => (
-        <a href={cert.link} target="_blank" class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-certs/80 transition-all duration-200 bg-card/80 backdrop-blur-sm">
+        <a
+          href={cert.link}
+          target="_blank"
+          class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-certs/80 transition-all duration-200 bg-card/80 backdrop-blur-sm"
+        >
           <img src={cert.image} alt={cert.title + ' preview'} class="w-full h-40 object-cover" />
           <div class="p-4 flex flex-col justify-between h-[calc(100%-160px)]">
             <CardContent>
-            <CardTitle class="text-lg leading-snug">{cert.title}</CardTitle>
-                <br />
+              <CardTitle class="text-lg leading-snug">{cert.title}</CardTitle>
+              <br />
               <p class="text-sm mb-2 line-clamp-3">{cert.subtitle}</p>
               <p class="text-xs italic mb-3">{cert.status}</p>
               <br />
@@ -30,3 +37,46 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
     </div>
   </div>
 </section>
+
+<!-- Vanilla JS for drag-to-scroll -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('scrollable-certs');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.classList.add('dragging');
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isDown = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mouseup', () => {
+      isDown = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1;
+      container.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+
+<!-- Optional style for feedback -->
+<style>
+  .dragging {
+    cursor: grabbing;
+    user-select: none;
+  }
+</style>

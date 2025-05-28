@@ -1,4 +1,5 @@
 ---
+// Top of your Astro component
 import projects from '../data/projects.json';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 ---
@@ -7,14 +8,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
   <div class="max-w-6xl mx-auto text-center">
     <h2 class="text-4xl font-bold mb-12 text-projects">Projects</h2>
 
-    <div class="flex overflow-x-auto gap-4 snap-x snap-mandatory no-scrollbar scroll-smooth px-2">
+    <div
+      id="scrollable-projects"
+      class="flex overflow-x-auto gap-4 snap-x snap-mandatory no-scrollbar scroll-smooth px-2 cursor-grab"
+    >
       {projects.map(project => (
-        <a href={project.link} target="_blank" class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-projects/80 transition-all duration-200 bg-card/80 backdrop-blur-sm">
+        <a
+          href={project.link}
+          target="_blank"
+          class="min-w-[300px] w-[320px] h-[400px] flex-shrink-0 snap-start block border border-border rounded-lg overflow-hidden hover:border-projects/80 transition-all duration-200 bg-card/80 backdrop-blur-sm"
+        >
           <img src={project.image} alt={project.title + ' preview'} class="w-full h-40 object-cover" />
           <div class="p-4 flex flex-col justify-between h-[calc(100%-160px)]">
             <CardContent>
-            <CardTitle class="text-lg leading-snug">{project.title}</CardTitle>
-                <br />
+              <CardTitle class="text-lg leading-snug">{project.title}</CardTitle>
+              <br />
               <p class="text-sm mb-2 line-clamp-3">{project.subtitle}</p>
               <p class="text-xs italic mb-3">{project.status}</p>
               <br />
@@ -30,3 +38,45 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
     </div>
   </div>
 </section>
+
+<!-- Add drag-to-scroll script -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('scrollable-projects');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.classList.add('dragging');
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isDown = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mouseup', () => {
+      isDown = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 1;
+      container.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+
+<style>
+  .dragging {
+    cursor: grabbing;
+    user-select: none;
+  }
+</style>
