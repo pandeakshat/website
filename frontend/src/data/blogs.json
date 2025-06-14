@@ -8,12 +8,20 @@
       "tags": ["Experience", "Programming", "Mistakes", "Growth"]
     },
     {
-      "title": "Dashboarding with Streamlit",
-      "subtitle": "Best practices for Python data dashboards",
-      "link": "https://write.pandeakshat.com/streamlit-dashboards",
-      "status": "Draft",
-      "image": "/images/project-flow.png",
-      "tags": ["Streamlit", "Data Science", "Python"]
+      "title": "The Realignment Project: Engineering Your Personal Evolution",
+      "subtitle": "A candid exploration of dreams, fears, and actionable steps to redesign your life from the inside out.",
+      "link": "https://dev.to/pandeakshat/the-realignment-project-engineer-your-perfect-evolution-ojj",
+      "status": "Published",
+      "image": "/images/realignment.webp",
+      "tags": ["Self Improvement", "Life", "Reflection", "Growth"]
+    },
+    {
+      "title": "Why WSL is My Data Science & Software Engineering Daily Driver (and Why It Might Be Yours Too)",
+      "subtitle": "WSL over Linux: A Data Scientist's Perspective",
+      "link": "https://dev.to/pandeakshat/why-wsl-is-my-data-science-software-engineering-daily-driver-and-why-it-might-be-yours-too-3393",
+      "status": "Published",
+      "image": "/images/wsl-datascience.webp",
+      "tags": ["Data Science", "Linux", "WSL2", "Guides", "Roadmap"]
     }
   ]
   
