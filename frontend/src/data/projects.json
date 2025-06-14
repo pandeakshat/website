@@ -18,7 +18,7 @@
         {
       "title": "BSE Simulation",
       "subtitle": "BSE - Robot Trader Workshop Web Simulation",
-      "link": "https://github.com/pandeakshat/nft-marketplace",
+      "link": "https://bse-simulator-demo.streamlit.app/",
       "status": "In Development",
       "image": "/images/bse-simulation.png",
       "technologies": ["Python", "Matplotlib", "Streamlit", "Pandas"]
