@@ -23,12 +23,20 @@
       "image": "/images/bse-simulation.png",
       "technologies": ["Python", "Matplotlib", "Streamlit", "Pandas"]
     },
+    {
+      "title": "Smart Home Optimization",
+      "subtitle": "Optimize light diffusion, temperature regulation, and energy consumption for a smart home.",
+      "link": "https://github.com/pandeakshat/home-energy-optimization",
+      "status": "In Development",
+      "image": "/images/smart-home-opt.jpg",
+      "technologies": ["Python", "Matplotlib", "Streamlit", "Pandas"]
+    },
     
     {
       "title": "Project Flow",
       "subtitle": "Track team tasks with a timeline interface",
       "link": "https://github.com/pandeakshat/project-flow",
-      "status": "In Development",
+      "status": "In Planning",
       "image": "/images/project-flow.png",
       "technologies": ["Astro", "TailwindCSS", "Firebase"]
     }
